@@ -56,7 +56,7 @@ created on: July 6, 2022 2:44 PM
 - go to `views`
 - to get a url to the views, create `url` file in api, copy paste from settings folder (inner music_controller)
     - website address paths are sent to project folder’s `url` then it will know where to go from there to the correct app
-    - these urls will be specific for that app that we put the `[urls.py](http://urls.py)` in
+    - these urls will be specific for that app that we put the `urls.py` in
 
 <aside>
 💗 in /api/urls
@@ -84,10 +84,10 @@ urlpatterns = [
 - to update the database to store the current changes that we made to the app
 - whenever we have a change to the models/database, run this.
 - need to do this because first time running the app
-- `python [manager.py](http://manager.py) runserver`
+- `python manager.py runserver`
 </aside>
 
-- Now run the website using `python [manage.py](http://manage.py) runserver`
+- Now run the website using `python manage.py runserver`
 
 # Django REST Framework
 
@@ -130,14 +130,14 @@ def generate_unique_code():
         - gives us a list of how many objects with that filter
     - `Room.objects.filter(code=code).count() == 0:`
         - if the list has a length of 0, then it’s a good code that we can use, since it’s not unique
-- make sure to `python [manage.py](http://manage.py) makemigrations`
-    - then to python [manage.py](http://manage.py) migrate
+- make sure to `python manage.py makemigrations`
+    - then to python manage.pymigrate
 </aside>
 
 ### How do we see the Models in our database?
 
 <aside>
-💗 Make a [serializers.py](http://serializers.py) file!
+💗 Make a serializers.py file!
 
 - will translate models into json responses
 
@@ -175,7 +175,7 @@ class RoomView(generics.CreateAPIView):
     serializer_class = RoomSerializer
 ```
 
-- add these imports for the [serializer.py](http://serializer.py) and class Room within [models.py](http://models.py) and for rest_framework
+- add these imports for the serializer.py and class Room within models.py and for rest_framework
 - then simply create a class with the with name of model view
     - add query set to include all the rooms in the database
     - and serializer class
@@ -424,7 +424,7 @@ INSTALLED_APPS = [
 
 ### How to run the webapp
 
-- run the server `npm [manage.py](http://manage.py)` runserver (make sure just in project folder)
+- run the server `npm manage.py runserver` (make sure just in project folder)
 - `npm run dev` (make sure in frontend folder)
     - will have an error, but its just a warning and is okay
     - [https://stackoverflow.com/questions/66772358/webpack-warning-warning-in-defineplugin-conflicting-values-for-process-env-no](https://stackoverflow.com/questions/66772358/webpack-warning-warning-in-defineplugin-conflicting-values-for-process-env-no)
